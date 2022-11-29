@@ -1,0 +1,9 @@
+tensorflow
+streamlit
+htbuilder
+Pillow
+os
+numpy
+tensorflow_hub
+functools
+time
