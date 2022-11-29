@@ -1,9 +1,9 @@
 tensorflow
-streamlit
-htbuilder
-Pillow
+streamlit==1.15.0
+htbuilder==0.6.1
+Pillow==9.2.0
 os
 numpy
-tensorflow_hub
+tensorflow-hub==0.12.0
 functools
 time
