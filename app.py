@@ -146,7 +146,7 @@ def main():
     col1, col2 ,col3 = st.columns(3,gap='large')
     spin=False
     with col1:
-        st.subheader('Upload the Content Image ')
+        st.subheader('Content Image ')
         content_file = st.file_uploader("Content Image")
         if content_file:
             img=Image.open(content_file)
@@ -154,7 +154,7 @@ def main():
             img.save("./content_images/content.png")
 
     with col2:
-        st.subheader('Upload the Style Image ')
+        st.subheader('Style Image ')
         style_file = st.file_uploader("Style Image")
         if style_file:
             img2=Image.open(style_file)
@@ -162,7 +162,7 @@ def main():
             st.image(img2,width=500) 
             
     with col3:
-        st.subheader('Resulted Artistic Image ')
+        st.subheader('Artistic Image ')
         if content_file and style_file:
             with st.spinner('Creating Art....'):
                 content_path='./content_images/content.png'
