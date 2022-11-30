@@ -163,7 +163,7 @@ def main():
     with col3:
         st.subheader('Resulted Artistic Image ')
         if content_file and style_file:
-            with st.spinner('Wait for prediction....'):
+            with st.spinner('Creating Art...'):
                 content_path='./content_images/content.png'
                 style_path='./style_images/style.png'
                 img2=process_image(content_path=content_path,style_path=style_path)
