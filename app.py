@@ -9,6 +9,7 @@ import numpy as np
 import PIL.Image
 import time
 import functools
+from io import BytesIO
 import tensorflow_hub as hub
 # Load compressed models from tensorflow_hub
 os.environ['TFHUB_MODEL_LOAD_FORMAT'] = 'COMPRESSED'
@@ -163,12 +164,18 @@ def main():
     with col3:
         st.subheader('Resulted Artistic Image ')
         if content_file and style_file:
-            with st.spinner('Creating Art...'):
+            with st.spinner('Creating Art....'):
                 content_path='./content_images/content.png'
                 style_path='./style_images/style.png'
-                img2=process_image(content_path=content_path,style_path=style_path)
-                st.image(img2,width=500)
-                img2.save('result.png')
+                img3=process_image(content_path=content_path,style_path=style_path)
+                st.image(img3,width=500)
+                img3.save('result.png')
+            response=st.download_button(label='Download Image',
+                        data= open('result.png', 'rb').read(),
+                        file_name='artistic_image.png',
+                        mime='image/png')
+                    
+                    
                 
         
 if __name__=='__main__': 
