@@ -147,7 +147,7 @@ def main():
     spin=False
     with col1:
         st.subheader('Content Image ')
-        content_file = st.file_uploader("Content Image")
+        content_file = st.file_uploader("Upload Content Image")
         if content_file:
             img=Image.open(content_file)
             st.image(img,width=500) 
@@ -155,7 +155,7 @@ def main():
 
     with col2:
         st.subheader('Style Image ')
-        style_file = st.file_uploader("Style Image")
+        style_file = st.file_uploader("Upload Style Image")
         if style_file:
             img2=Image.open(style_file)
             img2.save("./style_images/style.png")
